@@ -14,7 +14,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefWidth="200.0">
          <children>
             <TextField fx:id="nevMezo" promptText="Név" />
             <Spinner fx:id="korMezo" />

@@ -13,9 +13,20 @@ public class EmberekController {
     private TableColumn<Ember, String> nevOszlop;
     @FXML
     private TableColumn<Ember, Integer> korOszlop;
-
     @FXML
-    private void initialize() {
+    private TextField nevMezo;
+    @FXML
+    private Spinner korMezo;
+    @FXML
+    private void hozzaadClick(ActionEvent actionEvent){
+        String nev = nevMezo.getText().trim();
+        int kor = korMezo.getValue();
+        nevOszlop.setCellValueFactory(new PropertyValueFactory<>("nev"));
+        korOszlop.setCellValueFactory(new PropertyValueFactory<>("eletkor"));
+        Ember e = new Ember (nev, kor);
+        emberek.getItems().add(e);
+    }
+    /*private void initialize() {
         nevOszlop.setCellValueFactory(new PropertyValueFactory<>("nev"));
         korOszlop.setCellValueFactory(new PropertyValueFactory<>("eletkor"));
         Ember e1 = new Ember("Gipsz Jakab", 25);
@@ -24,5 +35,5 @@ public class EmberekController {
         emberek.getItems().add(e1);
         emberek.getItems().add(e2);
         emberek.getItems().add(e3);
-    }
+    }*/
 }
